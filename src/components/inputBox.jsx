@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import {
@@ -14,7 +14,6 @@ import ana from "./analitical.png";
 import mang from "./magn.png";
 import mic from "./mic.png";
 import { BiIdCard } from "react-icons/bi";
-import { GoEye, GoEyeClosed } from "react-icons/go";
 
 const InputBox = () => {
   const [regno, setRegno] = useState("");

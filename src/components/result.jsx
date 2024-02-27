@@ -10,7 +10,6 @@ import {
   Td,
   Flex,
   VStack,
-  Spinner,
 } from "@chakra-ui/react";
 import { useLocation } from "react-router-dom";
 import { FaSpinner } from "react-icons/fa";
