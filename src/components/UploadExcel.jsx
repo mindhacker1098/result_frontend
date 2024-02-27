@@ -59,6 +59,32 @@ const UploadExcel = () => {
         });
       });
   };
+  const DeleteFile = () => {
+ 
+
+ 
+
+    fetch("https://result-itgg.onrender.com/deleteall")
+      .then((data) => {
+        toast({
+          title: "Success",
+          description: "All files deleted",
+          status: "success",
+          duration: 3000,
+          isClosable: true,
+        });
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        toast({
+          title: "Error",
+          description: "Error Deleting file.",
+          status: "error",
+          duration: 3000,
+          isClosable: true,
+        });
+      });
+  };
 
   return (
     <ChakraProvider>
@@ -84,6 +110,9 @@ const UploadExcel = () => {
           </FormControl>
           <Button mt={4} colorScheme="teal" onClick={uploadFile}>
             Upload
+          </Button>
+          <Button mt={4} colorScheme="teal" onClick={DeleteFile}>
+            Delete ALL
           </Button>
         </Flex>
       </Flex>
